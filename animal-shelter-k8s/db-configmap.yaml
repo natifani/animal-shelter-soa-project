@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: animal-shelter-db-configmap
-data:
-  mysql-server: { { DB_SERVER } }
-  mysql-database-name: { { DB_NAME } }
-  mysql-user-username: { { DB_USER_USERNAME } }
-  mysql-root-username: { { DB_ROOT_USERNAME } }

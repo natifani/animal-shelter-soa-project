@@ -1,0 +1,40 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      global cors:
+        corsConfigurations:
+          "[/**]":
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: animal-shelter-service
+          uri: lb://ANIMAL-SHELTER-SERVICE
+          predicates:
+            - Path=/api/animals/**
+          filters:
+            - RewritePath=/api/animals/(?<path>.*), /$\{path}
+        - id: adoption-service
+          uri: lb://ADOPTION-SERVICE
+          predicates:
+            - Path=/api/adoptions/**
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/authenticate/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-discovery:8761/eureka
+  instance:
+    hostname: api-gateway
+
+jwt:
+  secret: ${JWT_SECRET}
+  accessTokenValidity: 7200000

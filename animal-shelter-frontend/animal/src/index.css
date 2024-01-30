@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.animalDetailsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.animalDetailsCardTitle {
+  font-size: larger;
+}
+
+.adoptionButton {
+  margin: 1rem;
+  color: whitesmoke;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.feedback {
+  display: none;
+}
+
+.adoptionCardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listPaginationContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.actionButtonList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.addAnimalDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.submitButtonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.formgroupDiv {
+  margin-bottom: 1rem;
+}
+
+.feedbackDiv {
+  margin-top: 1rem;
+}
+
+.adoptedText {
+  color: green;
+}
+
+.nothingDiv {
+  text-align: center;
+}

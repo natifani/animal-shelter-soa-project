@@ -1,0 +1,9 @@
+package com.soa.demo.adoption.repository;
+
+import com.soa.demo.adoption.model.Animal;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface AnimalRepository extends JpaRepository<Animal, Long> {
+}

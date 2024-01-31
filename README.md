@@ -1,9 +1,5 @@
 # animal-shelter-soa-project
 
-Before deploying the resources, the following variables need to be replaced in the configuration:
-- DB_SERVER
-- DB_NAME
-- DB_USER_USERNAME
-- DB_ROOT_USERNAME
-- DB_USER_PASSWORD
-- DB_ROOT_PASSWORD
+Two branches:
+- `soa-project` branch contains the project implementation, which is a PoC for an animal shelter management application
+- `soa-topic` branch contains the implementation of a topic from the project, namely an example project on how to deploy a Spring app communicating with a MySQL database in Kubernetes

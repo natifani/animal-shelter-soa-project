@@ -25,6 +25,7 @@ public class GatewayConfig {
         return builder.routes()
                 .route("AUTH-SERVICE", r -> r.path("/authenticate/**").filters(f -> f.filter(authFilter)).uri("lb://AUTH-SERVICE"))
                 .route("ANIMAL-SHELTER-SERVICE", r -> r.path("/api/animals/**").filters(f -> f.filter(authFilter)).uri("lb://ANIMAL-SHELTER-SERVICE"))
+                .route("ADOPTION-SERVICE", r -> r.path("/api/adoptions/**").filters(f -> f.filter(authFilter)).uri("lb://ADOPTION-SERVICE"))
                 .build();
     }
 }
